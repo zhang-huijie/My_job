@@ -9,7 +9,7 @@ def min_lose(a_i,q_all,n,m):
         out_q = a_i[n-q_all[i]:]
         for i in range(len(out_q)):
             beishu = feg // m
-            count = out_q[i]*beishu
+            count += out_q[i]*(beishu+1)
             feg += 1
         min_out.append(count)
     return min_out
