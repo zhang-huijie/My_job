@@ -1,3 +1,4 @@
+#实现快速排序
 import random
 def quick_sort(seq):
     if(len(seq) < 2):
