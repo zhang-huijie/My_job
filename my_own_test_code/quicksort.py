@@ -1,4 +1,4 @@
-#实现快速排序
+#实现快速排序_空间开销比较大的
 import random
 def quick_sort(seq):
     if(len(seq) < 2):

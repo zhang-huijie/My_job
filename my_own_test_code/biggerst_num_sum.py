@@ -1,3 +1,4 @@
+#求最大的连续的子序列的和
 def maxContinueSum(nums):
     n = len(nums)
     dp = [0 for _ in range(n)]

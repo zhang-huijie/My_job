@@ -1,7 +1,7 @@
 def partition(nums, l, r):
 	v = nums[l]
 	left = l + 1
-	right = r - 1
+	right = r -1
 	while True:
 		while left < r and nums[left] < v:
 			left += 1
@@ -23,12 +23,10 @@ def qsort(nums, l, r):
 	mid = partition(nums, l, r)
 	qsort(nums, l, mid)
 	qsort(nums, mid+1, r)
-def test():
-	nums = [6,4,12,5,6]
+if __name__ == "__main__":
+	nums = [6, 4, 12, 5, 6]
 	qsort(nums, 0, len(nums))
 	print(nums)
-if __name__ == "__main__":
-	test()
 
 
 
