@@ -1,3 +1,4 @@
+#快速排序短的空间开销
 def partition(nums, l, r):
 	v = nums[l]
 	left = l + 1
