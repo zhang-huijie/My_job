@@ -1,4 +1,4 @@
-#python 实现堆排序
+#python 用python实现堆排序
 def max_heapify(heap,heapSize,root):  # 调整列表中的元素并保证以root为根的堆是一个大根堆
     '''
     给定某个节点的下标root，这个节点的父节点、左子节点、右子节点的下标都可以被计算出来。
