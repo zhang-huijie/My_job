@@ -1,5 +1,6 @@
+
 #include <iostream>
- 
+//c++实现冒泡排序
 void bubble_sort(int arr[], int length)
 {
     for (int i = 0; i < length - 1; i++) {
