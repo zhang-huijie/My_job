@@ -1,5 +1,5 @@
 #结点定义
-#用python实现单链表的操作，增改删减等等
+#用python实现单链表的操作，增改删减等等,包括创建
 class Node(object):
     def __init__(self,val,p=0):
         self.data = val
