@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <vector>
 using namespace std;
-
+//类似背包问题，没想出来最优解，贪心了一下过了80%
 int main() {
 	int M, N;
 	cin >> M >> N;
