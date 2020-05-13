@@ -6,7 +6,6 @@ def maxContinueSum(nums):
     ret = dp[0]
     for i in range(1, n):
         dp[i] = max(dp[i-1] + nums[i], nums[i])
-        print(dp[i])
         ret = max(ret, dp[i])
     return ret
 
