@@ -1,5 +1,5 @@
 #求两个字符串的最长公共的子字符串,
-#采用两种方法
+#采用两种方法,进行最长公共子字符串的计算
 def getMaxSubStr(str1, str2):
     len1 = len(str1)
     len2 = len(str2)
