@@ -1,8 +1,8 @@
-#快速排序短的空间开销
+#春雨版本
 def partition(nums, l, r):
 	v = nums[l]
 	left = l + 1
-	right = r -1
+	right = r - 1
 	while True:
 		while left < r and nums[left] < v:
 			left += 1
@@ -15,17 +15,18 @@ def partition(nums, l, r):
 		if left >= right:
 			break
 		nums[left], nums[right] = nums[right], nums[left]
-
 	nums[l], nums[right] = nums[right], nums[l]
 	return right
 def qsort(nums, l, r):
 	if l >= r:
-		return
-	mid = partition(nums, l, r)
-	qsort(nums, l, mid)
-	qsort(nums, mid+1, r)
+		return nums
+	else:
+		mid = partition(nums, l, r)
+		qsort(nums, l, mid)
+		qsort(nums, mid+1, r)
+
 if __name__ == "__main__":
-	nums = [6, 4, 12, 5, 6]
+	nums = [1,3,4,5,2,6,9,7,8,0]
 	qsort(nums, 0, len(nums))
 	print(nums)
 
