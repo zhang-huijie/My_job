@@ -1,4 +1,4 @@
-#最长的无重复的子序列leecode3
+#最长的无重复的子序列leecode-3
 def lengthOfLongestSubstring(s):
     head = 0
     tail = 0
