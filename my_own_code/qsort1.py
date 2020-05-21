@@ -32,6 +32,23 @@ def quick_sort(seq):
         right = [elem for elem in seq[1:] if elem > base]
         return quick_sort(left) + [base] + quick_sort(right)
 #//////////////////////////////////////////////////////////////
+#迷惑解法3
+def quick_sort_02(nums, start, end):
+    if start >= end:
+        return
+    left = start
+    right = end
+    mid = nums[left]
+    while left < right:
+        while left < right and nums[right] >= mid:
+            right -= 1
+        nums[left] = nums[right]
+        while left < right and nums[left] < mid:
+            left += 1
+        nums[right] = nums[left]
+    nums[left] = mid
+    quick_sort_02(nums, start, left - 1)
+    quick_sort_02(nums, left + 1, end)
 
 
 
