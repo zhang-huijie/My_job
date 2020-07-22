@@ -1,6 +1,4 @@
-
-
-
+#输入型号的string类型转变成输出的二维数组
 
 matrix =input()
 arr = int(matrix.count(']')-1)
