@@ -33,30 +33,28 @@ def quick_sort(seq):
         return quick_sort(left) + [base] + quick_sort(right)
 #//////////////////////////////////////////////////////////////
 #迷惑解法3
-def quick_sort_02(nums, start, end):
-    if start >= end:
-        return
-    left = start
-    right = end
-    mid = nums[left]
-    while left < right:
-        while left < right and nums[right] >= mid:
-            right -= 1
-        nums[left] = nums[right]
-        while left < right and nums[left] < mid:
-            left += 1
-        nums[right] = nums[left]
-    nums[left] = mid
-    quick_sort_02(nums, start, left - 1)
-    quick_sort_02(nums, left + 1, end)
-
-
+def quicksort(data):     #快速排序
+    stone = data[0]
+    i = 1
+    j = len(data)-1
+    if len(data) > 1:     #分为len(data) >2和len(data) == 2两种情况，可合并
+        while j > i:
+            if data[j] <= stone:
+                if data[i] > stone:
+                    data[j], data[i] = data[i], data[j]
+                else:
+                    i += 1
+            else:
+                j -= 1
+        if data[j] <= stone:     #当len(data) == 2时只执行此部分
+            data[0], data[j] = data[j], data[0]
+        return quicksort(data[:j]) + quicksort(data[j:])
+    else:     #回归条件，len(data) <= 1
+        return data
 
 if __name__ == "__main__":
-	nums = [4,3,2,5,1]
-	qsort(nums, 0, len(nums)-1)
-	print(nums)
-
+	nums = [1,3,4,5,2]
+	print(quicksort(nums))
 
 
 

@@ -25,7 +25,7 @@ def midTraverse(root):
 def afterTraverse(root):
     if root== None:
         return
-    afterTraverse(root.right)
+    afterTraverse(root.left)
     afterTraverse(root.right)
     print(root.value)
 
